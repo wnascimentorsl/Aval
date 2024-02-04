@@ -3,7 +3,11 @@ session_start();
 require '../Conexao.php';
 require '../functions_db.php';
 
-
+if (empty($_POST['id'])) {
+        $_SESSION['_flash'] = 'Por favor selecione um item';
+        header('location: /form-venda.php');
+        exit();
+}
 $db = new Conexao();
 $db->setConexao();
 

@@ -133,9 +133,6 @@ $lists = getProductList();
                     <div class="col-md-12">
                       <div class="form-group">
                         <label class="form-label">Produto
-                          <?php if (isset($errors['body'])) : ?>
-                            <p class="text-red-500 text-xs mt-2"><?= $errors['body'] ?></p>
-                          <?php endif; ?>
                         </label>
 
                         <select name="id" class="form-control custom-select" onchange="handleSelectProduct(event)">
