@@ -1,8 +1,9 @@
-<!doctype php>
-<php lang="en" dir="ltr">
-  <?php require_once 'functions_db.php';
-  $produtos = getProductDeletetList(); ?>
-
+<?php
+require_once 'functions_db.php';
+$produtos = getProductDeletetList();
+?>
+<!doctype html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -38,6 +39,15 @@
     <script src="./assets/plugins/maps-google/plugin.js"></script>
     <!-- Input Mask Plugin -->
     <script src="./assets/plugins/input-mask/plugin.js"></script>
+    <script>
+      <?php
+      if (isset($_SESSION['_flash'])) {
+        $message = $_SESSION['_flash'];
+        unset($_SESSION['_flash']);
+        echo "alert('$message')";
+      }
+      ?>
+    </script>
   </head>
 
   <body class="">

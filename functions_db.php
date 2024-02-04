@@ -40,7 +40,8 @@ function getProductList()
                   LEFT JOIN product_sales ps
                     ON p.idproduct = ps.products_id
                  WHERE idelete = 0
-                 GROUP BY 1, 2, 3,4;");
+                 GROUP BY 1, 2, 3,4 
+                 ORDER BY 1 DESC;");
     return $db->getArrayResults();
 }
 

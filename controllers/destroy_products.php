@@ -7,7 +7,7 @@ require '../Conexao.php';
     $db->setConexao();
 
     $sql = "UPDATE products
-            SET idelete = 1 
+               SET idelete = 1 
              WHERE idproduct = {$_GET['id']}";
 
     $db->query($sql);
